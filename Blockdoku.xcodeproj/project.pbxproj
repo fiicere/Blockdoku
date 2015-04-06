@@ -8,12 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		46B91FC91AD32E4100E6F701 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FC81AD32E4100E6F701 /* AppDelegate.swift */; };
-		46B91FCB1AD32E4100E6F701 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 46B91FCA1AD32E4100E6F701 /* GameScene.sks */; };
 		46B91FCD1AD32E4100E6F701 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FCC1AD32E4100E6F701 /* GameScene.swift */; };
 		46B91FCF1AD32E4100E6F701 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FCE1AD32E4100E6F701 /* GameViewController.swift */; };
-		46B91FD21AD32E4100E6F701 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46B91FD01AD32E4100E6F701 /* Main.storyboard */; };
-		46B91FD41AD32E4100E6F701 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46B91FD31AD32E4100E6F701 /* Images.xcassets */; };
-		46B91FD71AD32E4100E6F701 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46B91FD51AD32E4100E6F701 /* LaunchScreen.xib */; };
 		46B91FE31AD32E4100E6F701 /* BlockdokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FE21AD32E4100E6F701 /* BlockdokuTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,12 +27,8 @@
 		46B91FC31AD32E4100E6F701 /* Blockdoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blockdoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B91FC71AD32E4100E6F701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46B91FC81AD32E4100E6F701 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		46B91FCA1AD32E4100E6F701 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		46B91FCC1AD32E4100E6F701 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		46B91FCE1AD32E4100E6F701 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		46B91FD11AD32E4100E6F701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		46B91FD31AD32E4100E6F701 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		46B91FD61AD32E4100E6F701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		46B91FDC1AD32E4100E6F701 /* BlockdokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlockdokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46B91FE11AD32E4100E6F701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46B91FE21AD32E4100E6F701 /* BlockdokuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockdokuTests.swift; sourceTree = "<group>"; };
@@ -82,12 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				46B91FC81AD32E4100E6F701 /* AppDelegate.swift */,
-				46B91FCA1AD32E4100E6F701 /* GameScene.sks */,
 				46B91FCC1AD32E4100E6F701 /* GameScene.swift */,
 				46B91FCE1AD32E4100E6F701 /* GameViewController.swift */,
-				46B91FD01AD32E4100E6F701 /* Main.storyboard */,
-				46B91FD31AD32E4100E6F701 /* Images.xcassets */,
-				46B91FD51AD32E4100E6F701 /* LaunchScreen.xib */,
 				46B91FC61AD32E4100E6F701 /* Supporting Files */,
 			);
 			path = Blockdoku;
@@ -198,10 +186,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46B91FD71AD32E4100E6F701 /* LaunchScreen.xib in Resources */,
-				46B91FD41AD32E4100E6F701 /* Images.xcassets in Resources */,
-				46B91FCB1AD32E4100E6F701 /* GameScene.sks in Resources */,
-				46B91FD21AD32E4100E6F701 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,25 +226,6 @@
 			targetProxy = 46B91FDD1AD32E4100E6F701 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		46B91FD01AD32E4100E6F701 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				46B91FD11AD32E4100E6F701 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		46B91FD51AD32E4100E6F701 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				46B91FD61AD32E4100E6F701 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		46B91FE41AD32E4100E6F701 /* Debug */ = {
