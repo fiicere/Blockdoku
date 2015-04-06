@@ -6,17 +6,12 @@
 //  Copyright (c) 2015 Kevin Yue. All rights reserved.
 //
 
+import Foundation
 import SpriteKit
 
 class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
-        self.addChild(myLabel)
+  
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
@@ -38,7 +33,7 @@ class GameScene: SKScene {
             self.addChild(sprite)
         }
     }
-   
+    
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
