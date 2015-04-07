@@ -113,7 +113,7 @@ public func - (left: CGFloat, right: Double) -> Double {
 }
 
 public func - (left: Double, right: CGFloat) -> Double {
-    return right - Double(left)
+    return left - Double(right)
 }
 
 public func -= (inout left: CGFloat, right: Double) {

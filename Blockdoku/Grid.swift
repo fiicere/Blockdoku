@@ -37,7 +37,7 @@ class Grid : SKShapeNode{
         for(var x=gridMin; x<=gridMax; x++){
             for(var y=gridMin; y<=gridMax; y++){
                 //Add a square at location
-                var sq = SKShapeNode(rectOfSize: CGSize(width: Constants.tileSize, height: Constants.tileSize))
+                var sq = SKShapeNode(rectOfSize: Constants.tileSize)
                 sq.fillColor = Constants.gridSqColor
                 sq.position = getPoint(Coordinate(x: x, y: y))
                 
