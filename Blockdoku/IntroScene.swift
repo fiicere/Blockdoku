@@ -9,19 +9,25 @@
 import SpriteKit
 
 class IntroScene: SKScene {
-    override func didMoveToView(view: SKView) {
+    override func didMoveToView(view: SKView) {        
+        Constants.screenSize = self.size
+
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")
         myLabel.text = "Hello, World!";
         myLabel.fontSize = 65;
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
         
+        myLabel.fontColor = UIColor.blueColor()
+        
         self.addChild(myLabel)
+        
+        self.backgroundColor = SKColor.whiteColor()
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         var scene:SKScene = GameScene(size: self.size)
-        self.view?.presentScene(scene, transition:SKTransition.fadeWithDuration(1))
+        self.view?.presentScene(scene, transition:SKTransition.fadeWithDuration(0.5))
     }
    
     override func update(currentTime: CFTimeInterval) {

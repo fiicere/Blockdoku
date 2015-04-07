@@ -16,6 +16,14 @@
 		46B91FD71AD32E4100E6F701 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46B91FD51AD32E4100E6F701 /* LaunchScreen.xib */; };
 		46B91FE31AD32E4100E6F701 /* BlockdokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FE21AD32E4100E6F701 /* BlockdokuTests.swift */; };
 		46B91FEE1AD331E000E6F701 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FED1AD331E000E6F701 /* GameScene.swift */; };
+		46B91FF21AD3365B00E6F701 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FF11AD3365B00E6F701 /* Coordinate.swift */; };
+		46B91FF41AD3373600E6F701 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FF31AD3373600E6F701 /* Piece.swift */; };
+		46B91FF71AD3374800E6F701 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FF61AD3374800E6F701 /* Tile.swift */; };
+		46B91FFA1AD3394500E6F701 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FF91AD3394500E6F701 /* Grid.swift */; };
+		46B91FFC1AD33BE200E6F701 /* GameGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FFB1AD33BE200E6F701 /* GameGrid.swift */; };
+		46B91FFE1AD33BE900E6F701 /* IndicatorGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FFD1AD33BE900E6F701 /* IndicatorGrid.swift */; };
+		46B920001AD33EAC00E6F701 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FFF1AD33EAC00E6F701 /* Arithmetic.swift */; };
+		46B920021AD3435200E6F701 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B920011AD3435200E6F701 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +50,14 @@
 		46B91FE11AD32E4100E6F701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46B91FE21AD32E4100E6F701 /* BlockdokuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockdokuTests.swift; sourceTree = "<group>"; };
 		46B91FED1AD331E000E6F701 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		46B91FF11AD3365B00E6F701 /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		46B91FF31AD3373600E6F701 /* Piece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		46B91FF61AD3374800E6F701 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		46B91FF91AD3394500E6F701 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		46B91FFB1AD33BE200E6F701 /* GameGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameGrid.swift; sourceTree = "<group>"; };
+		46B91FFD1AD33BE900E6F701 /* IndicatorGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorGrid.swift; sourceTree = "<group>"; };
+		46B91FFF1AD33EAC00E6F701 /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
+		46B920011AD3435200E6F701 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +101,9 @@
 			children = (
 				46B91FC81AD32E4100E6F701 /* AppDelegate.swift */,
 				46B91FCE1AD32E4100E6F701 /* GameViewController.swift */,
+				46B91FF81AD3393300E6F701 /* Grid */,
+				46B91FF51AD3373A00E6F701 /* Pieces */,
+				46B91FF01AD3363D00E6F701 /* Common */,
 				46B91FEF1AD332B800E6F701 /* Scenes */,
 				46B91FEC1AD32F1C00E6F701 /* Trash */,
 				46B91FC61AD32E4100E6F701 /* Supporting Files */,
@@ -135,6 +154,35 @@
 				46B91FED1AD331E000E6F701 /* GameScene.swift */,
 			);
 			name = Scenes;
+			sourceTree = "<group>";
+		};
+		46B91FF01AD3363D00E6F701 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				46B91FFF1AD33EAC00E6F701 /* Arithmetic.swift */,
+				46B920011AD3435200E6F701 /* Constants.swift */,
+				46B91FF11AD3365B00E6F701 /* Coordinate.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		46B91FF51AD3373A00E6F701 /* Pieces */ = {
+			isa = PBXGroup;
+			children = (
+				46B91FF31AD3373600E6F701 /* Piece.swift */,
+				46B91FF61AD3374800E6F701 /* Tile.swift */,
+			);
+			name = Pieces;
+			sourceTree = "<group>";
+		};
+		46B91FF81AD3393300E6F701 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				46B91FF91AD3394500E6F701 /* Grid.swift */,
+				46B91FFB1AD33BE200E6F701 /* GameGrid.swift */,
+				46B91FFD1AD33BE900E6F701 /* IndicatorGrid.swift */,
+			);
+			name = Grid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,9 +287,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				46B91FCD1AD32E4100E6F701 /* IntroScene.swift in Sources */,
+				46B91FF21AD3365B00E6F701 /* Coordinate.swift in Sources */,
+				46B91FF41AD3373600E6F701 /* Piece.swift in Sources */,
+				46B91FFA1AD3394500E6F701 /* Grid.swift in Sources */,
+				46B91FF71AD3374800E6F701 /* Tile.swift in Sources */,
 				46B91FCF1AD32E4100E6F701 /* GameViewController.swift in Sources */,
+				46B91FFC1AD33BE200E6F701 /* GameGrid.swift in Sources */,
+				46B91FFE1AD33BE900E6F701 /* IndicatorGrid.swift in Sources */,
 				46B91FEE1AD331E000E6F701 /* GameScene.swift in Sources */,
+				46B920001AD33EAC00E6F701 /* Arithmetic.swift in Sources */,
 				46B91FC91AD32E4100E6F701 /* AppDelegate.swift in Sources */,
+				46B920021AD3435200E6F701 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
