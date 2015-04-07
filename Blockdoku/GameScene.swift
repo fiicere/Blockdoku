@@ -11,16 +11,19 @@ import SpriteKit
 
 class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
-        Constants.screenSize = self.size
+        Constants.sceneSize = self.size
         
         self.backgroundColor = UIColor.whiteColor()
         
         self.addChild(GameGrid())
         self.addChild(IndicatorGrid())
         
-        println("Screen Size = (\(Constants.screenSize.width), \(Constants.screenSize.height))")
-        println("SubGrid Size = \(Constants.subGridSize)")
-        println("MainGrid Size = \(Constants.mainGridSize)")
+        println("Screen Size = \(Constants.sceneSize)")
+        println("Square Size = \(Constants.sqSize)")
+        println("IndGrid Size = \(Constants.indGridSize)")
+        println("IndGrid Position = \(Constants.indGridPos)")
+        println("GameGrid Size = \(Constants.gameGridSize)")
+        println("GameGrid Position = \(Constants.gameGridPos)")
 
         
     }

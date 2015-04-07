@@ -11,35 +11,29 @@ import spritekit
 
 struct Constants{
     
-    //Game Size
-    static var screenSize:CGSize = CGSize(width: 0,height: 0)
-    static var widthToHeight : Double = Double(screenSize.width / screenSize.height)
-    static var minScreenLen : Double = Double(min(screenSize.height, screenSize.width))
+    static var sceneSize:CGSize = CGSize(width: 0, height: 0)
+    static var minScreenDim = Double(min(sceneSize.height, sceneSize.width))
     
-    private static let screenMarginRatio : Double = 0.1
-    static var screenMargin:Double = minScreenLen * screenMarginRatio
+    // Grid Data
+    static let gridColor = UIColor.darkGrayColor()
+    static let gameGridN = 7
+    static let indGridN = 3
     
-    //Grids
-    static var gridColor = UIColor.darkGrayColor()
+    // Spacing Data
+    static var sqSize = minScreenDim / (gameGridN + indGridN + 3)
+    static var gameGridSize = CGSize(width: gameGridN * sqSize, height: gameGridN * sqSize)
+    static var indGridSize = CGSize(width: indGridN * sqSize, height: indGridN * sqSize)
     
-    //MainGrid
-    static var mainGridDims = 5
-    static var mainGridLen = minScreenLen - (2 * screenMargin)
-    static var mainGridSize:CGSize = CGSize(width: mainGridLen, height: mainGridLen)
-    static var mainGridPosition:CGPoint = CGPoint(x: minScreenLen/2, y: minScreenLen/2)
+    static var gameGridPos = CGPoint(x: gameGridSize.width / 2 + sqSize, y: sceneSize.height/2)
+    static var indGridPos = CGPoint(x: sceneSize.width - sqSize - indGridSize.width/2,
+        y: sceneSize.height - sqSize - indGridSize.height/2)
+
     
-    //SubGrid
-    static var subGridDims = 3
-    static var subGridSize = CGSize(width: gridSqSize * subGridDims, height: gridSqSize * subGridDims)
-    static var subGridDist = screenMargin + Double(subGridSize.width / 2)
-    static var subGridPosition = CGPoint(x: screenSize.width - subGridDist, y: screenSize.height - subGridDist)
+    // Square Data
+    static let gridSqColor = UIColor.whiteColor()
     
-    //Grid Squares
-    static var gridSqColor = UIColor.whiteColor()
-    static var gridSqSize = mainGridLen / mainGridDims
+    // Tiles
+    private static let sqMarginRatio:Double = 0.05
+    static var tileSize = sqSize * (1 - sqMarginRatio)
     
-    //Tile Size
-    private static let sqMarginRatio:Double = 0.025
-    static var sqMargin = gridSqSize * sqMarginRatio
-    static var tileSize = CGSize(width: gridSqSize - (2 * sqMargin), height: gridSqSize - (2 * sqMargin))
 }

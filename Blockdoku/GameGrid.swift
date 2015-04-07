@@ -12,7 +12,7 @@ import spritekit
 class GameGrid:Grid{
 
     init(){
-        super.init(pos: Constants.mainGridPosition, gridSize: Constants.mainGridSize, n: Constants.mainGridDims)
+        super.init(pos: Constants.gameGridPos, gridSize: Constants.gameGridSize, n: Constants.gameGridN)
     }
 
     required init?(coder aDecoder: NSCoder) {

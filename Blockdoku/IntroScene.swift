@@ -10,7 +10,7 @@ import SpriteKit
 
 class IntroScene: SKScene {
     override func didMoveToView(view: SKView) {        
-        Constants.screenSize = self.size
+        Constants.sceneSize = self.size
 
         /* Setup your scene here */
         let myLabel = SKLabelNode(fontNamed:"Chalkduster")

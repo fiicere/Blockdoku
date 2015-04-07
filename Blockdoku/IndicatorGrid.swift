@@ -12,7 +12,7 @@ import spriteKit
 class IndicatorGrid:Grid{
     
     init(){
-        super.init(pos: Constants.subGridPosition, gridSize: Constants.subGridSize, n: Constants.subGridDims)
+        super.init(pos: Constants.indGridPos, gridSize: Constants.indGridSize, n: Constants.indGridN)
     }
 
     required init?(coder aDecoder: NSCoder) {
