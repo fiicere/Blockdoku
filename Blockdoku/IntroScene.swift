@@ -22,7 +22,7 @@ class IntroScene: SKScene {
         
         self.addChild(myLabel)
         
-        self.backgroundColor = SKColor.whiteColor()
+        self.backgroundColor = Constants.sceneColor
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {

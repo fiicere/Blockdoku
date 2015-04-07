@@ -11,11 +11,13 @@ import spritekit
 
 struct Constants{
     
+    // Scene Data
     static var sceneSize:CGSize = CGSize(width: 0, height: 0)
     static var minScreenDim = Double(min(sceneSize.height, sceneSize.width))
+    static let sceneColor = UIColor.whiteColor()
     
     // Grid Data
-    static let gridColor = UIColor.darkGrayColor()
+    static let gridColor = UIColor.grayColor()
     static let gameGridN = 7
     static let indGridN = 3
     

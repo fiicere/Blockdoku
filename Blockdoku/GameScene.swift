@@ -13,7 +13,7 @@ class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         Constants.sceneSize = self.size
         
-        self.backgroundColor = UIColor.whiteColor()
+        self.backgroundColor = Constants.sceneColor
         
         self.addChild(GameGrid())
         self.addChild(IndicatorGrid())
