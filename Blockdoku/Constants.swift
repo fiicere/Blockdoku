@@ -30,8 +30,8 @@ struct Constants{
     
     static var gameGridPos = CGPoint(x: marginR + gameGridSize.width / 2,
         y: sceneSize.height - marginR - gameGridSize.height / 2)
-    static var indGridPos = CGPoint(x: sceneSize.width - marginR - indGridSize.width,
-        y: sceneSize.height - marginR - indGridSize.height)
+    static var indGridPos = CGPoint(x: sceneSize.width - marginR - indGridSize.width/2,
+        y: sceneSize.height - marginR - indGridSize.height/2)
     
     // Tile Data
     static let gridSqColor = UIColor.whiteColor()

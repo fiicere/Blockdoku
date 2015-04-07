@@ -18,16 +18,9 @@ class GameScene: SKScene {
         self.addChild(GameGrid())
         self.addChild(IndicatorGrid())
         
-        println("IndGrid Position X = sceneSize.width - marginR - indGridSize.width")
-        var i = Constants.indGridPos.x
-        var ss = Constants.sceneSize.width
-        var ind = Constants.indGridSize.width
-        var m = Constants.marginR
-        println("IndGrid Position X = \(i)")
-        println("ss  = \(ss)")
-        println("m = \(m)")
-        println("ind = \(ind)")
-        println("Should be at X = \((ss - m - ind))")
+        println("indGridPos = \(Constants.indGridPos)")
+        println("gameGridPos = \(Constants.gameGridPos)")
+
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
