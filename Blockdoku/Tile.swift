@@ -11,11 +11,28 @@ import spritekit
 
 class Tile:SKSpriteNode{
     var coord:Coordinate
-    //TODO: var grid:Grid
+    var grid:Grid
     
-    init(startCoord:Coordinate){
+    init(startCoord:Coordinate, g:Grid){
         coord = startCoord
+        grid = g
+        
         super.init()
+        
+        texture = SKTexture(imageNamed: Constants.imageName)
+        size = Constants.tileSize
+    }
+    
+    func positionOnGrid(){
+        self.position = grid.getPoint(coord)
+    }
+    
+    func positionOnGrid(offset:Coordinate){
+        self.position = grid.getPoint(coord + offset)
+    }
+    
+    func die(){
+        self.removeFromParent()
     }
 
     required init?(coder aDecoder: NSCoder) {

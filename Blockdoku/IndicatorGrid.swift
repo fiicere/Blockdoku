@@ -9,7 +9,7 @@
 import Foundation
 import spriteKit
 
-class IndicatorGrid:Grid{
+class IndicatorGrid:VisibleGrid{
     
     init(){
         super.init(pos: Constants.indGridPos, gridSize: Constants.indGridSize, n: Constants.indGridN)

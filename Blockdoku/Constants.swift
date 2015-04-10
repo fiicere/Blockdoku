@@ -37,8 +37,11 @@ struct Constants{
     
     // Tile Data
     static let gridSqColor = UIColor.whiteColor()
+    static let imageName = "Spaceship.png"
+    
     static let sqMarginRatio = 0.05
     static var tileSize = CGSize(width: sqSize * (1 - 2*sqMarginRatio), height: sqSize * (1-2*sqMarginRatio))
+    
 
     
 }

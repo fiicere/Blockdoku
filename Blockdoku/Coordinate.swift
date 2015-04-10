@@ -12,7 +12,25 @@ import spritekit
 public struct Coordinate{
     let x:Int
     let y:Int
+    
+    func adjacent(d:Direction) -> Coordinate{
+        switch d{
+        case .UP:
+            return self + Coordinate(x: 0,y: 1)
+        case .DOWN:
+            return self - Coordinate(x: 0, y: -1)
+        case .RIGHT:
+            return self + Coordinate(x: 1, y: 0)
+        case .LEFT:
+            return self - Coordinate(x: -1, y: 0)
+        default:
+            println("ERROR: Invalid direction")
+            return self
+        }
+    }
 }
+
+
 
 public func + (left: Coordinate, right: Coordinate) -> Coordinate {
     return Coordinate(x: left.x + right.x, y: left.y + right.y)

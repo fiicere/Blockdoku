@@ -27,32 +27,8 @@ class Grid : SKShapeNode{
         super.init()
         
         self.fillColor = Constants.gridColor
-        
-        displaySquares()
     }
-    
-    func displaySquares(){
-        addBackground()
-        
-        for(var x=gridMin; x<=gridMax; x++){
-            for(var y=gridMin; y<=gridMax; y++){
-                //Add a square at location
-                var sq = SKShapeNode(rectOfSize: Constants.tileSize)
-                sq.fillColor = Constants.gridSqColor
-                sq.position = getPoint(Coordinate(x: x, y: y))
-                
-                self.addChild(sq)
-            }
-        }
-    }
-    
-    func addBackground(){
-        var background = SKShapeNode(rectOfSize: size)
-        background.fillColor = Constants.gridColor
-        background.position = centerPosition
-        self.addChild(background)
 
-    }
     
     func offset(coord:Coordinate) -> CGPoint{
         return CGPoint(x: coord.x * size.width/dimensions, y: coord.y * size.height/dimensions)

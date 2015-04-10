@@ -24,6 +24,9 @@
 		46B91FFE1AD33BE900E6F701 /* IndicatorGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FFD1AD33BE900E6F701 /* IndicatorGrid.swift */; };
 		46B920001AD33EAC00E6F701 /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B91FFF1AD33EAC00E6F701 /* Arithmetic.swift */; };
 		46B920021AD3435200E6F701 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B920011AD3435200E6F701 /* Constants.swift */; };
+		46B920081AD6D87D00E6F701 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 46B920071AD6D87D00E6F701 /* Spaceship.png */; };
+		46B9200B1AD6DC9900E6F701 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B9200A1AD6DC9900E6F701 /* Direction.swift */; };
+		46B9200D1AD8663500E6F701 /* VisibleGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B9200C1AD8663500E6F701 /* VisibleGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		46B91FFD1AD33BE900E6F701 /* IndicatorGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorGrid.swift; sourceTree = "<group>"; };
 		46B91FFF1AD33EAC00E6F701 /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
 		46B920011AD3435200E6F701 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		46B920071AD6D87D00E6F701 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spaceship.png; path = Images.xcassets/Spaceship.imageset/Spaceship.png; sourceTree = "<group>"; };
+		46B9200A1AD6DC9900E6F701 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		46B9200C1AD8663500E6F701 /* VisibleGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibleGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				46B91FF51AD3373A00E6F701 /* Pieces */,
 				46B91FF01AD3363D00E6F701 /* Common */,
 				46B91FEF1AD332B800E6F701 /* Scenes */,
+				46B920091AD6D88300E6F701 /* Assets */,
 				46B91FEC1AD32F1C00E6F701 /* Trash */,
 				46B91FC61AD32E4100E6F701 /* Supporting Files */,
 			);
@@ -162,6 +169,7 @@
 				46B91FFF1AD33EAC00E6F701 /* Arithmetic.swift */,
 				46B920011AD3435200E6F701 /* Constants.swift */,
 				46B91FF11AD3365B00E6F701 /* Coordinate.swift */,
+				46B9200A1AD6DC9900E6F701 /* Direction.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -169,7 +177,6 @@
 		46B91FF51AD3373A00E6F701 /* Pieces */ = {
 			isa = PBXGroup;
 			children = (
-				46B91FF31AD3373600E6F701 /* Piece.swift */,
 				46B91FF61AD3374800E6F701 /* Tile.swift */,
 			);
 			name = Pieces;
@@ -179,10 +186,20 @@
 			isa = PBXGroup;
 			children = (
 				46B91FF91AD3394500E6F701 /* Grid.swift */,
+				46B9200C1AD8663500E6F701 /* VisibleGrid.swift */,
 				46B91FFB1AD33BE200E6F701 /* GameGrid.swift */,
 				46B91FFD1AD33BE900E6F701 /* IndicatorGrid.swift */,
+				46B91FF31AD3373600E6F701 /* Piece.swift */,
 			);
 			name = Grid;
+			sourceTree = "<group>";
+		};
+		46B920091AD6D88300E6F701 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				46B920071AD6D87D00E6F701 /* Spaceship.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B920081AD6D87D00E6F701 /* Spaceship.png in Resources */,
 				46B91FD71AD32E4100E6F701 /* LaunchScreen.xib in Resources */,
 				46B91FD41AD32E4100E6F701 /* Images.xcassets in Resources */,
 				46B91FCB1AD32E4100E6F701 /* GameScene.sks in Resources */,
@@ -294,10 +312,12 @@
 				46B91FCF1AD32E4100E6F701 /* GameViewController.swift in Sources */,
 				46B91FFC1AD33BE200E6F701 /* GameGrid.swift in Sources */,
 				46B91FFE1AD33BE900E6F701 /* IndicatorGrid.swift in Sources */,
+				46B9200D1AD8663500E6F701 /* VisibleGrid.swift in Sources */,
 				46B91FEE1AD331E000E6F701 /* GameScene.swift in Sources */,
 				46B920001AD33EAC00E6F701 /* Arithmetic.swift in Sources */,
 				46B91FC91AD32E4100E6F701 /* AppDelegate.swift in Sources */,
 				46B920021AD3435200E6F701 /* Constants.swift in Sources */,
+				46B9200B1AD6DC9900E6F701 /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
