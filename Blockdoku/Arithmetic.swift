@@ -270,3 +270,9 @@ public func mod(num: Double, base:CGFloat) -> Double{
     if(remainder < 0){return remainder + Double(base)}
     return remainder
 }
+
+//Probabilities
+
+public func trueWithProbability(probability:Double) -> Bool{
+    return (Double(arc4random()) / Double(UINT32_MAX)) < probability
+}

@@ -10,7 +10,7 @@ import Foundation
 import spritekit
 
 class GameGrid:VisibleGrid{
-
+    
     init(){
         super.init(pos: Constants.gameGridPos, gridSize: Constants.gameGridSize, n: Constants.gameGridN)
     }

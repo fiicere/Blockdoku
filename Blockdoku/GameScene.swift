@@ -17,6 +17,7 @@ class GameScene: SKScene {
         
         self.addChild(GameGrid())
         self.addChild(IndicatorGrid())
+        self.addChild(Piece())
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {

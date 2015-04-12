@@ -42,6 +42,10 @@ struct Constants{
     static let sqMarginRatio = 0.05
     static var tileSize = CGSize(width: sqSize * (1 - 2*sqMarginRatio), height: sqSize * (1-2*sqMarginRatio))
     
+    
+    // Game Constants
+    static let spawnRate:Double = 0.3
+    
 
     
 }

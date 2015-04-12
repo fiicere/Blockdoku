@@ -27,6 +27,8 @@
 		46B920081AD6D87D00E6F701 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 46B920071AD6D87D00E6F701 /* Spaceship.png */; };
 		46B9200B1AD6DC9900E6F701 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B9200A1AD6DC9900E6F701 /* Direction.swift */; };
 		46B9200D1AD8663500E6F701 /* VisibleGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B9200C1AD8663500E6F701 /* VisibleGrid.swift */; };
+		46B920111ADB083400E6F701 /* Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B920101ADB083400E6F701 /* Public.swift */; };
+		46B920141ADB0D0400E6F701 /* PlacedTiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B920131ADB0D0400E6F701 /* PlacedTiles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		46B920071AD6D87D00E6F701 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spaceship.png; path = Images.xcassets/Spaceship.imageset/Spaceship.png; sourceTree = "<group>"; };
 		46B9200A1AD6DC9900E6F701 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		46B9200C1AD8663500E6F701 /* VisibleGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibleGrid.swift; sourceTree = "<group>"; };
+		46B920101ADB083400E6F701 /* Public.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Public.swift; sourceTree = "<group>"; };
+		46B920131ADB0D0400E6F701 /* PlacedTiles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacedTiles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			children = (
 				46B91FC81AD32E4100E6F701 /* AppDelegate.swift */,
 				46B91FCE1AD32E4100E6F701 /* GameViewController.swift */,
+				46B920121ADB0CEE00E6F701 /* Display */,
 				46B91FF81AD3393300E6F701 /* Grid */,
 				46B91FF51AD3373A00E6F701 /* Pieces */,
 				46B91FF01AD3363D00E6F701 /* Common */,
@@ -170,6 +175,7 @@
 				46B920011AD3435200E6F701 /* Constants.swift */,
 				46B91FF11AD3365B00E6F701 /* Coordinate.swift */,
 				46B9200A1AD6DC9900E6F701 /* Direction.swift */,
+				46B920101ADB083400E6F701 /* Public.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -189,7 +195,6 @@
 				46B9200C1AD8663500E6F701 /* VisibleGrid.swift */,
 				46B91FFB1AD33BE200E6F701 /* GameGrid.swift */,
 				46B91FFD1AD33BE900E6F701 /* IndicatorGrid.swift */,
-				46B91FF31AD3373600E6F701 /* Piece.swift */,
 			);
 			name = Grid;
 			sourceTree = "<group>";
@@ -200,6 +205,15 @@
 				46B920071AD6D87D00E6F701 /* Spaceship.png */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		46B920121ADB0CEE00E6F701 /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				46B920131ADB0D0400E6F701 /* PlacedTiles.swift */,
+				46B91FF31AD3373600E6F701 /* Piece.swift */,
+			);
+			name = Display;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,11 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B920111ADB083400E6F701 /* Public.swift in Sources */,
 				46B91FCD1AD32E4100E6F701 /* IntroScene.swift in Sources */,
 				46B91FF21AD3365B00E6F701 /* Coordinate.swift in Sources */,
 				46B91FF41AD3373600E6F701 /* Piece.swift in Sources */,
 				46B91FFA1AD3394500E6F701 /* Grid.swift in Sources */,
 				46B91FF71AD3374800E6F701 /* Tile.swift in Sources */,
+				46B920141ADB0D0400E6F701 /* PlacedTiles.swift in Sources */,
 				46B91FCF1AD32E4100E6F701 /* GameViewController.swift in Sources */,
 				46B91FFC1AD33BE200E6F701 /* GameGrid.swift in Sources */,
 				46B91FFE1AD33BE900E6F701 /* IndicatorGrid.swift in Sources */,

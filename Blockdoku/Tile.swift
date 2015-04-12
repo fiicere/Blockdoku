@@ -17,10 +17,11 @@ class Tile:SKSpriteNode{
         coord = startCoord
         grid = g
         
-        super.init()
+        var t = SKTexture(imageNamed: Constants.imageName)
+        var s = Constants.tileSize
+        var c = UIColor.whiteColor()
         
-        texture = SKTexture(imageNamed: Constants.imageName)
-        size = Constants.tileSize
+        super.init(texture: t, color: c, size: s)
     }
     
     func positionOnGrid(){
