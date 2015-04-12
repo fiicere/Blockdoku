@@ -20,9 +20,15 @@ class Piece:SKNode{
     override init(){
         super.init()
         
+        newPiece()
+    }
+    
+    func newPiece(){
         createActiveTiles()
         copyActiveToInd()
         updateTilePositions()
+        
+        if(activeTiles.count == 0){newPiece()}
     }
 
     func createActiveTiles(){
@@ -38,12 +44,12 @@ class Piece:SKNode{
     }
     
     func copyActiveToInd(){
-//        for t:Tile in activeTiles{
-//            var t1:Tile = t.copy() as Tile
-//            t1.grid = Public.indGrid
-//            indTiles.append(t1)
-//            addChild(t1)
-//        }
+        for t:Tile in activeTiles{
+            var t1:Tile = t.duplicate()
+            t1.grid = Public.indGrid
+            indTiles.append(t1)
+            addChild(t1)
+        }
     }
 
     func updateTilePositions(){

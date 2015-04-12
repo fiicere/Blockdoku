@@ -35,6 +35,16 @@ class Tile:SKSpriteNode{
     func die(){
         self.removeFromParent()
     }
+    
+    func duplicate() -> Tile{
+        var t = Tile(startCoord: coord, g: grid)
+        
+        t.position = position
+        t.size = size
+        t.texture = texture
+        
+        return t
+    }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -10,6 +10,8 @@ import Foundation
 import SpriteKit
 
 class GameScene: SKScene {
+    var activePiece:Piece = Piece()
+    
     override func didMoveToView(view: SKView) {
         Constants.sceneSize = self.size
         
@@ -17,13 +19,22 @@ class GameScene: SKScene {
         
         self.addChild(GameGrid())
         self.addChild(IndicatorGrid())
-        self.addChild(Piece())
+        
+        activePiece = Piece()
+        self.addChild(activePiece)
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         for touch in touches{
-            printTouch(touch as UITouch)
+            replacePiece()
         }
+    }
+    
+    func replacePiece(){
+        activePiece.removeFromParent()
+        activePiece.removeAllChildren()
+        activePiece = Piece()
+        self.addChild(activePiece)
     }
     
     func printTouch(t:UITouch){
