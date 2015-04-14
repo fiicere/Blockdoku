@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import spritekit
+import SpriteKit
 
 class Tile:SKSpriteNode{
     var coord:Coordinate

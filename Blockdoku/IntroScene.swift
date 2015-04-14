@@ -25,7 +25,7 @@ class IntroScene: SKScene {
         self.backgroundColor = Constants.sceneColor
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         var scene:SKScene = GameScene(size: self.size)
         self.view?.presentScene(scene, transition:SKTransition.fadeWithDuration(0.5))
     }

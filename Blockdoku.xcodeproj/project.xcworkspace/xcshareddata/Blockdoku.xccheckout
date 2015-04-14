@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DE1EE175-DE59-4E26-9BF2-BE5392B413B9</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Blockdoku</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E4420E7008EC6E2259FAFED327D966480572DCD0</key>
 		<string>https://github.com/fiicere/Blockdoku.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Blockdoku.xcodeproj</string>
+	<string>Blockdoku.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E4420E7008EC6E2259FAFED327D966480572DCD0</key>

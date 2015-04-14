@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import spritekit
+import SpriteKit
 
 public struct Coordinate{
     let x:Int

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import spritekit
+import SpriteKit
 
 class GameGrid:VisibleGrid{
     

@@ -17,16 +17,27 @@ class GameScene: SKScene {
         
         self.backgroundColor = Constants.sceneColor
         
-        self.addChild(GameGrid())
-        self.addChild(IndicatorGrid())
+        self.addChild(Public.gameGrid)
+        self.addChild(Public.indGrid)
         
         activePiece = Piece()
         self.addChild(activePiece)
     }
+
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         for touch in touches{
             replacePiece()
+//            var loc:CGPoint = touch.locationInNode(self)
+//            println("Touched \(loc)")
+//            
+//            if(CGRectContainsPoint(Public.gameGrid.boundingBox, loc)){
+//                println("Touched game grid")
+//                activePiece.coord = Public.gameGrid.getCoord(loc)
+//            }
+//            if(Public.indGrid.containsPoint(loc)){
+//                println("Touched ind grid")
+//                replacePiece()}
         }
     }
     
@@ -36,12 +47,5 @@ class GameScene: SKScene {
         activePiece = Piece()
         self.addChild(activePiece)
     }
-    
-    func printTouch(t:UITouch){
-        println("Touched \(t.locationInNode(self))")
-    }
-    
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
-    }
+
 }

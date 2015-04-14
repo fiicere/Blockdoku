@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import spritekit
-import uikit
+import SpriteKit
+import UIKit
 
 class Grid : SKShapeNode{
     let centerPosition:CGPoint
@@ -41,6 +41,18 @@ class Grid : SKShapeNode{
     
     func isOnGrid(coord:Coordinate) -> Bool{
         return coord.x > gridMin && coord.x < gridMax && coord.y > gridMin && coord.y < gridMax
+    }
+    
+    func getCoord(point:CGPoint)->Coordinate{
+        return Coordinate(x: getNearestAxis(point.x), y: getNearestAxis(point.y))
+    }
+    
+    private func getNearestAxis(x:Double)->Int{
+        return Int(floor((x - size.width/2) / Constants.sqSize))
+    }
+    
+    private func getNearestAxis(x:CGFloat)->Int{
+        return getNearestAxis(Double(x))
     }
     
     

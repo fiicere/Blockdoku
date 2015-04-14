@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import spriteKit
+import SpriteKit
 
 class IndicatorGrid:VisibleGrid{
     
