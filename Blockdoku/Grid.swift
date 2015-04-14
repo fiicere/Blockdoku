@@ -43,18 +43,21 @@ class Grid : SKShapeNode{
         return coord.x > gridMin && coord.x < gridMax && coord.y > gridMin && coord.y < gridMax
     }
     
+    func isOnGrid(p:CGPoint) -> Bool{
+        return (p.x > centerPosition.x - size.width/2 &&
+            p.x < centerPosition.x + size.width/2 &&
+            p.y > centerPosition.y - size.height/2 &&
+            p.y < centerPosition.y + size.height/2)
+    }
+    
     func getCoord(point:CGPoint)->Coordinate{
-        return Coordinate(x: getNearestAxis(point.x), y: getNearestAxis(point.y))
+        var nearestX = Int(floor((point.x - size.width/2) / Constants.sqSize))
+        var nearestY = Int(floor((point.y - size.height/2) / Constants.sqSize))
+        
+        
+        
+        return Coordinate(x: nearestX, y: nearestY)
     }
-    
-    private func getNearestAxis(x:Double)->Int{
-        return Int(floor((x - size.width/2) / Constants.sqSize))
-    }
-    
-    private func getNearestAxis(x:CGFloat)->Int{
-        return getNearestAxis(Double(x))
-    }
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -26,18 +26,16 @@ class GameScene: SKScene {
 
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        for touch in touches{
-            replacePiece()
-//            var loc:CGPoint = touch.locationInNode(self)
-//            println("Touched \(loc)")
-//            
-//            if(CGRectContainsPoint(Public.gameGrid.boundingBox, loc)){
-//                println("Touched game grid")
-//                activePiece.coord = Public.gameGrid.getCoord(loc)
-//            }
-//            if(Public.indGrid.containsPoint(loc)){
-//                println("Touched ind grid")
-//                replacePiece()}
+        for item in touches{
+            var touch = item as! UITouch
+            var loc:CGPoint = touch.locationInNode(self)
+            println("Touched \(loc)")
+
+            if(Public.gameGrid.isOnGrid(loc)){
+                activePiece.coord = Public.gameGrid.getCoord(loc)
+            }
+            if(Public.indGrid.isOnGrid(loc)){
+                replacePiece()}
         }
     }
     
