@@ -57,6 +57,37 @@ class Piece:SKNode{
         for t:Tile in indTiles{t.position = t.grid.getPoint(t.coord)}
 
     }
+    
+    private func center(){
+        for d:Direction in Direction.all{
+            if(canShift(d.opposite())){shiftPiece(d.opposite())}
+            if(canShift(d)){shiftPiece(d)}
+        }
+    }
+    
+    private func canShift(d:Direction) -> Bool{
+        for t:Tile in indTiles{
+            if(!isInBounds(t.coord.adjacent(d))){
+                return false
+            }
+        }
+        return true
+    }
+    
+    private func shiftPiece(d:Direction){
+        println("Shifting \(d)")
+        for t:Tile in indTiles{t.coord = t.coord.adjacent(d)}
+        
+        for t:Tile in activeTiles{t.coord = t.coord.adjacent(d)}
+    }
+    
+    func isInBounds(c:Coordinate) -> Bool{
+        if(c.x > Public.indGrid.gridMax){return false}
+        if(c.x < Public.indGrid.gridMin){return false}
+        if(c.y > Public.indGrid.gridMax){return false}
+        if(c.y < Public.indGrid.gridMin){return false}
+        return true
+    }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
