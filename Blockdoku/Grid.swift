@@ -51,10 +51,8 @@ class Grid : SKShapeNode{
     }
     
     func getCoord(point:CGPoint)->Coordinate{
-        var nearestX = Int(floor((point.x - size.width/2) / Constants.sqSize))
-        var nearestY = Int(floor((point.y - size.height/2) / Constants.sqSize))
-        
-        
+        var nearestX = Int(round((point.x - centerPosition.x) / Constants.sqSize))
+        var nearestY = Int(round((point.y - centerPosition.y) / Constants.sqSize))
         
         return Coordinate(x: nearestX, y: nearestY)
     }

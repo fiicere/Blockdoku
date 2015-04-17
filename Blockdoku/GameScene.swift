@@ -29,7 +29,7 @@ class GameScene: SKScene {
         for item in touches{
             var touch = item as! UITouch
             var loc:CGPoint = touch.locationInNode(self)
-            println("Touched \(loc)")
+//            println("Touched \(loc)")
 
             if(Public.gameGrid.isOnGrid(loc)){
                 activePiece.coord = Public.gameGrid.getCoord(loc)
