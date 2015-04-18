@@ -40,7 +40,7 @@ class Grid : SKShapeNode{
     }
     
     func isOnGrid(coord:Coordinate) -> Bool{
-        return coord.x > gridMin && coord.x < gridMax && coord.y > gridMin && coord.y < gridMax
+        return coord.x >= gridMin && coord.x <= gridMax && coord.y >= gridMin && coord.y <= gridMax
     }
     
     func isOnGrid(p:CGPoint) -> Bool{

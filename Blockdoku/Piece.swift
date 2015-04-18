@@ -60,6 +60,7 @@ class Piece:SKNode{
     }
     
     private func center(){
+
         for d:Direction in Direction.all{
             if(!canShift(d.opposite())){
                 attemptShift(d)
@@ -74,7 +75,7 @@ class Piece:SKNode{
     
     private func canShift(d:Direction) -> Bool{
         for t:Tile in indTiles{
-            if(!isInBounds(t.coord.adjacent(d))){
+            if(!Public.indGrid.isOnGrid(t.coord.adjacent(d))){
                 return false
             }
         }
@@ -85,14 +86,6 @@ class Piece:SKNode{
         for t:Tile in indTiles{t.coord = t.coord.adjacent(d)}
         
         for t:Tile in activeTiles{t.coord = t.coord.adjacent(d)}
-    }
-    
-    func isInBounds(c:Coordinate) -> Bool{
-        if(c.x > Public.indGrid.gridMax){return false}
-        if(c.x < Public.indGrid.gridMin){return false}
-        if(c.y > Public.indGrid.gridMax){return false}
-        if(c.y < Public.indGrid.gridMin){return false}
-        return true
     }
     
     private func printPiece(){
