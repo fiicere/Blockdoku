@@ -27,6 +27,7 @@ class Piece:SKNode{
         createActiveTiles()
         copyActiveToInd()
         updateTilePositions()
+        center()
         
         if(activeTiles.count == 0){newPiece()}
     }
@@ -60,9 +61,15 @@ class Piece:SKNode{
     
     private func center(){
         for d:Direction in Direction.all{
-            if(canShift(d.opposite())){shiftPiece(d.opposite())}
-            if(canShift(d)){shiftPiece(d)}
+            if(!canShift(d.opposite())){
+                attemptShift(d)
+            }
         }
+        updateTilePositions()
+    }
+    
+    private func attemptShift(d:Direction){
+        if(canShift(d)){shiftPiece(d)}
     }
     
     private func canShift(d:Direction) -> Bool{
@@ -75,7 +82,6 @@ class Piece:SKNode{
     }
     
     private func shiftPiece(d:Direction){
-        println("Shifting \(d)")
         for t:Tile in indTiles{t.coord = t.coord.adjacent(d)}
         
         for t:Tile in activeTiles{t.coord = t.coord.adjacent(d)}
@@ -87,6 +93,10 @@ class Piece:SKNode{
         if(c.y > Public.indGrid.gridMax){return false}
         if(c.y < Public.indGrid.gridMin){return false}
         return true
+    }
+    
+    private func printPiece(){
+        for t:Tile in indTiles{println("\(t.coord.toString())")}
     }
 
     required init?(coder aDecoder: NSCoder) {

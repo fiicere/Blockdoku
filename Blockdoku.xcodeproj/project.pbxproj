@@ -117,8 +117,8 @@
 				46B91FF01AD3363D00E6F701 /* Common */,
 				46B91FEF1AD332B800E6F701 /* Scenes */,
 				46B920091AD6D88300E6F701 /* Assets */,
-				46B91FEC1AD32F1C00E6F701 /* Trash */,
 				46B91FC61AD32E4100E6F701 /* Supporting Files */,
+				46B91FEC1AD32F1C00E6F701 /* Trash */,
 			);
 			path = Blockdoku;
 			sourceTree = "<group>";
