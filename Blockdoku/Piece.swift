@@ -11,8 +11,14 @@ import SpriteKit
 
 class Piece:SKNode{
     var coord:Coordinate = Coordinate(x: 0,y: 0){
-        didSet{updateTilePositions()}
+        willSet{lastCoord = coord}
+        didSet{
+            if(!pieceInBounds()){coord = lastCoord}
+            updateTilePositions()
+        }
     }
+    
+    private var lastCoord:Coordinate = Coordinate(x: 0, y: 0)
     
     var activeTiles = Array<Tile>()
     var indTiles = Array<Tile>()
@@ -59,8 +65,14 @@ class Piece:SKNode{
 
     }
     
+    func pieceInBounds() -> Bool{
+        for t:Tile in activeTiles{
+            if(!Public.gameGrid.isOnGrid(t.coord + coord)){return false}
+        }
+        return true
+    }
+    
     private func center(){
-
         for d:Direction in Direction.all{
             if(!canShift(d.opposite())){
                 attemptShift(d)
