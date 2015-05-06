@@ -11,6 +11,7 @@ import Foundation
 struct Public {
     static var gameGrid:GameGrid = GameGrid()
     static var indGrid:IndicatorGrid = IndicatorGrid()
+    static var placedTiles:PlacedTiles = PlacedTiles()
     
     
 }

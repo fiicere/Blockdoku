@@ -34,6 +34,10 @@ public struct Coordinate{
     }
 }
 
+public func == (left:Coordinate, right:Coordinate) -> Bool{
+    return left.x == right.x && left.y == right.y
+}
+
 public func + (left: Coordinate, right: Coordinate) -> Coordinate {
     return Coordinate(x: left.x + right.x, y: left.y + right.y)
 }

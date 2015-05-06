@@ -50,7 +50,7 @@ class Piece:SKNode{
         }
     }
     
-    func copyActiveToInd(){
+    private func copyActiveToInd(){
         for t:Tile in activeTiles{
             var t1:Tile = t.duplicate()
             t1.grid = Public.indGrid
@@ -70,6 +70,18 @@ class Piece:SKNode{
             if(!Public.gameGrid.isOnGrid(t.coord + coord)){return false}
         }
         return true
+    }
+    
+    func getActive() -> Array<Tile>{
+        var newActive = Array<Tile>()
+        
+        for t:Tile in activeTiles{
+            var t1 = t.duplicate()
+            t1.coord = coord + t.coord
+            newActive.append(t1)
+        }
+        
+        return newActive
     }
     
     private func center(){

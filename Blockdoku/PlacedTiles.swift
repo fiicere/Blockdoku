@@ -11,4 +11,54 @@ import SpriteKit
 
 class PlacedTiles:SKNode{
     
+    private var placedTiles = Array<Tile>(){
+        didSet{updateChildrenToPlacedTiles()}
+        
+    }
+    
+    func tryAddPiece(p:Piece) -> Bool{
+        if(!canAddPiece(p)){return false}
+        else{
+            addPiece(p)
+            return true
+        }
+    }
+    
+    private func canAddPiece(p:Piece) -> Bool{
+        for t:Tile in p.getActive(){
+            if(!canPlace(t)){
+                return false
+            }
+        }
+        return true
+    }
+    
+    private func addPiece(p:Piece){
+        for t:Tile in p.getActive(){addTile(t)}
+    }
+    
+    func reset(){
+        placedTiles = Array<Tile>()
+    }
+    
+    private func updateChildrenToPlacedTiles(){
+        self.removeAllChildren()
+        for t:Tile in placedTiles{self.addChild(t)}
+    }
+    
+    private func isAvailable(c:Coordinate) -> Bool{
+        for t:Tile in placedTiles{
+            if(t.coord == c){return false}
+        }
+        return true
+    }
+    
+    private func canPlace(t:Tile) -> Bool{
+        return isAvailable(t.coord)
+    }
+    
+    
+    private func addTile(t:Tile){
+        placedTiles.append(t)
+    }
 }

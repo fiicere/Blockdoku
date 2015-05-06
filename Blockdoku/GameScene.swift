@@ -19,6 +19,7 @@ class GameScene: SKScene {
         
         self.addChild(Public.gameGrid)
         self.addChild(Public.indGrid)
+        self.addChild(Public.placedTiles)
         
         activePiece = Piece()
         self.addChild(activePiece)
@@ -35,6 +36,7 @@ class GameScene: SKScene {
                 activePiece.coord = Public.gameGrid.getCoord(loc)
             }
             if(Public.indGrid.isOnGrid(loc)){
+                Public.placedTiles.tryAddPiece(activePiece)
                 replacePiece()}
         }
     }
