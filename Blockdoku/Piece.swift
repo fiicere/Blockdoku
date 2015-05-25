@@ -15,6 +15,14 @@ class Piece:SKNode{
         didSet{
             if(!pieceInBounds()){coord = lastCoord}
             updateTilePositions()
+            updatePieceColor()
+        }
+    }
+    var color:UIColor = UIColor.greenColor(){
+        didSet{
+            println("My color is: \(color)")
+            for t:Tile in activeTiles{t.color = color}
+            for t:Tile in indTiles{t.color = color}
         }
     }
     
@@ -34,6 +42,7 @@ class Piece:SKNode{
         copyActiveToInd()
         updateTilePositions()
         center()
+        updatePieceColor()
         
         if(activeTiles.count == 0){newPiece()}
     }
@@ -62,7 +71,15 @@ class Piece:SKNode{
     func updateTilePositions(){
         for t:Tile in activeTiles{t.position = t.grid.getPoint(coord + t.coord)}
         for t:Tile in indTiles{t.position = t.grid.getPoint(t.coord)}
-
+    }
+    
+    func updatePieceColor(){
+        if (Public.placedTiles.canAddPiece(self)){
+            self.color = UIColor.greenColor()
+        }
+        else{
+            self.color = UIColor.redColor()
+        }
     }
     
     func pieceInBounds() -> Bool{

@@ -13,7 +13,7 @@ class PlacedTiles:SKNode{
     
     private var placedTiles = Array<Tile>(){
         didSet{updateChildrenToPlacedTiles()}
-        
+        //TODO: This is very inefficient because it is called once for every added TILE, not for every added piece
     }
     
     func tryAddPiece(p:Piece) -> Bool{
@@ -24,7 +24,7 @@ class PlacedTiles:SKNode{
         }
     }
     
-    private func canAddPiece(p:Piece) -> Bool{
+    func canAddPiece(p:Piece) -> Bool{
         for t:Tile in p.getActive(){
             if(!canPlace(t)){
                 return false

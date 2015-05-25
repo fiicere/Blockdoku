@@ -17,7 +17,7 @@ class Tile:SKSpriteNode{
         coord = startCoord
         grid = g
         
-        var t = SKTexture(imageNamed: Constants.imageName)
+        var t = SKTexture(imageNamed: Constants.tileImageName)
         var s = Constants.tileSize
         var c = UIColor.whiteColor()
         
