@@ -22,6 +22,8 @@ class Tile:SKSpriteNode{
         var c = UIColor.whiteColor()
         
         super.init(texture: t, color: c, size: s)
+        
+        self.colorBlendFactor = Constants.tileColorBlend
     }
     
     func positionOnGrid(){
